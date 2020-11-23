@@ -8,12 +8,14 @@ pipeline
     }
     stages 
     {
-        stage('install docker')
+        stage('install maven')
         {
             steps
             {
-                sh 'sudo yum install docker -y'
-                sh 'sudo docker --version'
+                sh 'sudo mkdir /opt/maven'
+                sh 'sudo cd /opt/maven'
+                sh 'wget https://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz '
+                sh 'ls -l'
             }
         }
     }
