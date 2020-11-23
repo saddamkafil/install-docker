@@ -1,0 +1,17 @@
+pipeline
+{
+    agent 'any'
+    {
+
+    }
+    stages 
+    {
+        stage('check for java')
+        {
+            steps
+            {
+                sh 'sudo java --version'
+            }
+        }
+    }
+}
