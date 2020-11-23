@@ -8,11 +8,11 @@ pipeline
     }
     stages 
     {
-        stage('check for java')
+        stage('install git in slave')
         {
             steps
             {
-                sh 'sudo java --version'
+                sh 'sudo yum install git -y'
             }
         }
     }
